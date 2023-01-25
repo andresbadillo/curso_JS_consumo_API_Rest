@@ -116,6 +116,9 @@ html {
 .upload-form input {
     display: none;
 }
+.upload-form button {
+    margin-top: 10px;
+}
 
 .favorite-michis {
     display: flex;
