@@ -1,8 +1,14 @@
+const API_KEY = 'live_NzL6iOJnvucvbwSzGp2XagmbNKwn5sBX5SWiRmbpLBR9SIv8ONgqdanYuuhQkDiO';
+
+const api = axios.create({
+    baseURL: 'https://api.thecatapi.com/v1/',
+});
+api.defaults.headers.common['x-api-key'] = API_KEY;
+
 const API_URL_RAMDOM = 'https://api.thecatapi.com/v1/images/search?limit=3';
 const API_URL_FAVORITES = 'https://api.thecatapi.com/v1/favourites';
 const API_URL_FAVORITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}`;
 const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
-const API_KEY = 'live_NzL6iOJnvucvbwSzGp2XagmbNKwn5sBX5SWiRmbpLBR9SIv8ONgqdanYuuhQkDiO';
 
 const spanError = document.getElementById('error');
 
@@ -77,27 +83,30 @@ async function loadFavoriteMichis() {
 }
 
 async function saveFavoriteMichi(id) {
-    const res = await fetch(API_URL_FAVORITES, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': API_KEY,
-        },
-        body: JSON.stringify({
-            image_id: id,
-        })
+    // const res = await fetch(API_URL_FAVORITES, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'x-api-key': API_KEY,
+    //     },
+    //     body: JSON.stringify({
+    //         image_id: id,
+    //     })
+    // });
+    // const data = await res.json();
+
+    /* Utilizamos axios */
+    const {data, status} = await api.post('/favourites', {
+        image_id: id,
     });
 
-    const data = await res.json();
-
-    if (res.status !== 200) {
-        spanError.innerText = 'Hubo un error: ' + res.status;
+    if (status !== 200) {
+        spanError.innerText = 'Hubo un error: ' + status + data.message;
     } else {
         console.log('Michi guardado en favoritos');
         loadFavoriteMichis();
     }
 
-    console.log(res);
 }
 
 async function deleteFavoriteMichi(id) {
