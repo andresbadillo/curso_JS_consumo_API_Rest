@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 20px 0;
+}
+.title h1 {
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
+}
+.btn {
+    background-color: white;
+    color: black;
+    border: 2px solid cadetblue;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.btn:hover {
+    background-color: cadetblue;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.ramdom-michis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.container-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.article-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 0px 10px;
+}
+.img {
+    width: 240px;
+    height: 180px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.upload-michi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+    background-color: whitesmoke;
+}
+.upload-michi h2 {
+    margin-bottom: 20px;
+}
+.upload-michi form input {
+    margin-bottom: 10px;
+}
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.upload-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.upload-form label span {
+    font-size: 14px;
+}
+.upload-form input {
+    display: none;
+}
+
+.favorite-michis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.fav-btn {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.fav-btn:hover {
+    background-color: antiquewhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+footer{
+    background-color: whitesmoke;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+footer p a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+footer ul li {
+    float: left;
+    text-align: center;
+    width: 4em;
+}
+footer p{
+    font-size: 1.2rem;
+}
+footer i{
+    color: gray;
+    font-size: 1.8rem;
+    transition-duration: 400ms;
+}
+footer i:hover{
+    color: black;
+}

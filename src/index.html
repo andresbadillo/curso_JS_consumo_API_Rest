@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos aleatorios</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/10b9adabac.js"
+      crossorigin="anonymous"
+    ></script>  
+</head>
+<body>
+    <section class="container">
+        <div class="title">            
+            <h1>Michis APP</h1>
+        </div>
+
+        <section class="ramdom-michis" id="ramdomMichis">
+            <h2>Michis aleatorios</h2>
+            <span id="error"></span>
+
+            <div class="container-img">
+                <article class="article-img">
+                    <img id="img1" class="img" alt="Foto gatito aleatorio">
+                    <button id="btnGuardar1" class="fav-btn">🧡 Favoritos</button>
+                </article>
+                <article class="article-img">
+                    <img id="img2" class="img" alt="Foto gatito aleatorio">
+                    <button id="btnGuardar2" class="fav-btn">🧡 Favoritos</button>
+                </article>
+                <article class="article-img">
+                    <img id="img3" class="img" alt="Foto gatito aleatorio">
+                    <button id="btnGuardar3" class="fav-btn">🧡 Favoritos</button>
+                </article> 
+            </div>      
+        </section>
+
+        <div id="btn" class="container-btn">
+            <button onclick="loadRamdomMichis()" class="btn">🔃 Recargar</button>
+        </div>
+
+        <section class="upload-michi" id="uploadMichi">
+            <h2>Sube la foto de tu michi</h2>
+
+            <form class="upload-form" id="uploadForm">
+                <label class="fav-btn" for="file">
+                    <span>📷 Selecciona la foto</span>
+                    <input id="file" type="file" name="file">
+                </label>
+                
+                <button class="btn" type="button" onclick="uploadMichiPhoto()">⬆️ Subir foto</button>
+            </form>
+        </section>
+
+        <section class="favorite-michis">
+            <h2>Michis favoritos</h2>
+            <span id="error"></span>
+
+            <!-- <article class="article-img">
+                <img id="img1" class="img" alt="Foto gatito favorito">
+                <button id="btnEliminar" class="fav-btn">Eliminar de favoritos</button>
+            </article> -->
+
+            <div class="container-img" id="favoriteMichis">
+
+            </div>
+        </section>
+    
+    </section>
+
+    <footer>
+        <p>Made with 🧡 by: <a target="_blank" href="https://www.andresbadillo.co/">andresbadillo.co</a></p>
+        <ul class="footer-contact">
+            <li>
+                <a target="_blank" href="https://github.com/andresbadillo">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/raul-andres-badillo-jaimes/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.instagram.com/andresbadillo.co/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+          <li>
+                <a target="_blank" href="https://www.tiktok.com/@andresbadillo.co">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+          </li>
+          
+        </ul>
+      </footer>
+
+    <script id="img" src="./main.js"></script>
+</body>
+</html>

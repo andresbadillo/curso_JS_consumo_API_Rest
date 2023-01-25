@@ -1,0 +1,20 @@
+{
+  "name": "curso_js_consumo_api_rest",
+  "version": "1.0.0",
+  "description": "Curso: Consumo de API Rest con JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresbadillo/curso_JS_consumo_API_Rest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresbadillo/curso_JS_consumo_API_Rest/issues"
+  },
+  "homepage": "https://github.com/andresbadillo/curso_JS_consumo_API_Rest#readme"
+}
